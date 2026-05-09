@@ -129,11 +129,11 @@ export function ServicesSection() {
             <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
             Core Services
           </div>
-          <h2 className="text-headline text-white mb-4">
+          <h2 className="text-headline text-foreground mb-4">
             Enterprise-Grade{" "}
             <span className="gradient-text">Solutions</span>
           </h2>
-          <p className="text-white/50 text-lg max-w-2xl mx-auto">
+          <p className="text-foreground/50 text-lg max-w-2xl mx-auto">
             From AI infrastructure to cloud platforms — we architect, build, and scale
             the systems that power modern enterprises.
           </p>
@@ -162,7 +162,7 @@ export function ServicesSection() {
                     >
                       <svc.icon className={`w-6 h-6 ${colorMap[svc.color]}`} />
                     </div>
-                    <span className="text-white/20 text-4xl font-bold">
+                    <span className="text-foreground/20 text-4xl font-bold">
                       {svc.label}
                     </span>
                   </div>
@@ -171,10 +171,10 @@ export function ServicesSection() {
                   >
                     {svc.tagline}
                   </p>
-                  <h3 className="text-2xl font-bold text-white mb-4">
+                  <h3 className="text-2xl font-bold text-foreground mb-4">
                     {svc.title}
                   </h3>
-                  <p className="text-white/50 leading-relaxed mb-6">
+                  <p className="text-foreground/50 leading-relaxed mb-6">
                     {svc.description}
                   </p>
                   <Link
@@ -186,15 +186,15 @@ export function ServicesSection() {
                 </div>
 
                 {/* Right panel — features */}
-                <div className="p-8 lg:p-10 border-t lg:border-t-0 lg:border-l border-white/5 bg-white/[0.02]">
-                  <p className="text-xs font-semibold text-white/30 uppercase tracking-widest mb-5">
+                <div className="p-8 lg:p-10 border-t lg:border-t-0 lg:border-l border-border bg-white/[0.02]">
+                  <p className="text-xs font-semibold text-foreground/30 uppercase tracking-widest mb-5">
                     Capabilities
                   </p>
                   <ul className="space-y-3">
                     {svc.features.map((feat) => (
                       <li
                         key={feat}
-                        className="flex items-center gap-3 text-sm text-white/60"
+                        className="flex items-center gap-3 text-sm text-foreground/60"
                       >
                         <span
                           className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${bgMap[svc.color].replace(
@@ -223,7 +223,7 @@ export function ServicesSection() {
         >
           <Link
             href="/services"
-            className="inline-flex items-center gap-2 px-8 py-3.5 bg-white/5 hover:bg-white/10 text-white font-semibold rounded-lg border border-white/10 hover:border-white/20 transition-all"
+            className="inline-flex items-center gap-2 px-8 py-3.5 bg-muted hover:bg-white/10 text-foreground font-semibold rounded-lg border border-border hover:border-white/20 transition-all"
           >
             View All Services <ArrowRight className="w-4 h-4" />
           </Link>

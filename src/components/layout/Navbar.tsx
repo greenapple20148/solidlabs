@@ -50,7 +50,7 @@ export function Navbar() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled
-          ? "bg-[#050914]/90 backdrop-blur-xl border-b border-white/5 shadow-xl shadow-black/30"
+          ? "bg-background/90 backdrop-blur-xl border-b border-border shadow-xl"
           : "bg-transparent"
       )}
     >
@@ -64,7 +64,7 @@ export function Navbar() {
               <Zap className="relative z-10 w-4 h-4 text-white" />
             </div>
             <div>
-              <span className="text-white font-bold text-lg tracking-tight">
+              <span className="text-foreground font-bold text-lg tracking-tight">
                 SolidLabs
               </span>
               <span className="text-blue-400 font-light text-lg tracking-tight ml-1">
@@ -83,7 +83,7 @@ export function Navbar() {
                   onMouseEnter={() => setOpenDropdown(link.label)}
                   onMouseLeave={() => setOpenDropdown(null)}
                 >
-                  <button className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-white/70 hover:text-white transition-colors rounded-lg hover:bg-white/5">
+                  <button className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-foreground/70 hover:text-foreground transition-colors rounded-lg hover:bg-muted">
                     {link.label}
                     <ChevronDown
                       className={cn(
@@ -109,7 +109,7 @@ export function Navbar() {
                               "block px-3 py-2 text-sm rounded-lg transition-all",
                               pathname === child.href
                                 ? "text-blue-400 bg-blue-500/10"
-                                : "text-white/70 hover:text-white hover:bg-white/5"
+                                : "text-foreground/70 hover:text-foreground hover:bg-muted"
                             )}
                           >
                             {child.label}
@@ -127,7 +127,7 @@ export function Navbar() {
                     "px-4 py-2 text-sm font-medium rounded-lg transition-all",
                     pathname === link.href
                       ? "text-blue-400 bg-blue-500/10"
-                      : "text-white/70 hover:text-white hover:bg-white/5"
+                      : "text-foreground/70 hover:text-foreground hover:bg-muted"
                   )}
                 >
                   {link.label}
@@ -141,7 +141,7 @@ export function Navbar() {
             {mounted && (
               <button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="p-2 rounded-lg text-white/50 hover:text-white hover:bg-white/5 transition-all"
+                className="p-2 rounded-lg text-foreground/50 hover:text-foreground hover:bg-muted transition-all"
                 aria-label="Toggle theme"
               >
                 {theme === "dark" ? (
@@ -153,7 +153,7 @@ export function Navbar() {
             )}
             <Link
               href="/contact"
-              className="px-5 py-2 bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold rounded-lg transition-all duration-200 shadow-lg shadow-blue-600/25 hover:shadow-blue-500/40"
+              className="px-5 py-2 bg-blue-600 hover:bg-blue-500 text-foreground text-sm font-semibold rounded-lg transition-all duration-200 shadow-lg shadow-blue-600/25 hover:shadow-blue-500/40"
             >
               Schedule Consultation
             </Link>
@@ -164,7 +164,7 @@ export function Navbar() {
             {mounted && (
               <button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="p-2 rounded-lg text-white/50 hover:text-white"
+                className="p-2 rounded-lg text-foreground/50 hover:text-foreground"
                 aria-label="Toggle theme"
               >
                 {theme === "dark" ? (
@@ -176,7 +176,7 @@ export function Navbar() {
             )}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="p-2 rounded-lg text-white/70 hover:text-white hover:bg-white/5 transition-all"
+              className="p-2 rounded-lg text-foreground/70 hover:text-foreground hover:bg-muted transition-all"
               aria-label="Toggle menu"
             >
               {mobileOpen ? (
@@ -197,20 +197,20 @@ export function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="lg:hidden bg-[#050914]/95 backdrop-blur-xl border-t border-white/5"
+            className="lg:hidden bg-[#050914]/95 backdrop-blur-xl border-t border-border"
           >
             <div className="max-w-7xl mx-auto px-4 py-4 space-y-1">
               {navLinks.map((link) =>
                 link.children ? (
                   <div key={link.label}>
-                    <p className="px-3 py-2 text-xs font-semibold text-white/30 uppercase tracking-widest">
+                    <p className="px-3 py-2 text-xs font-semibold text-foreground/30 uppercase tracking-widest">
                       {link.label}
                     </p>
                     {link.children.map((child) => (
                       <Link
                         key={child.href}
                         href={child.href}
-                        className="block px-6 py-2.5 text-sm text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-all"
+                        className="block px-6 py-2.5 text-sm text-foreground/70 hover:text-foreground hover:bg-muted rounded-lg transition-all"
                       >
                         {child.label}
                       </Link>
@@ -224,17 +224,17 @@ export function Navbar() {
                       "block px-3 py-2.5 text-sm font-medium rounded-lg transition-all",
                       pathname === link.href
                         ? "text-blue-400 bg-blue-500/10"
-                        : "text-white/70 hover:text-white hover:bg-white/5"
+                        : "text-foreground/70 hover:text-foreground hover:bg-muted"
                     )}
                   >
                     {link.label}
                   </Link>
                 )
               )}
-              <div className="pt-3 border-t border-white/5">
+              <div className="pt-3 border-t border-border">
                 <Link
                   href="/contact"
-                  className="block w-full text-center px-5 py-3 bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold rounded-lg transition-all"
+                  className="block w-full text-center px-5 py-3 bg-blue-600 hover:bg-blue-500 text-foreground text-sm font-semibold rounded-lg transition-all"
                 >
                   Schedule Consultation
                 </Link>

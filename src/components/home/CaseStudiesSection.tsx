@@ -55,10 +55,10 @@ export function CaseStudiesSection() {
             <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
             Case Studies
           </div>
-          <h2 className="text-headline text-white mb-4">
+          <h2 className="text-headline text-foreground mb-4">
             Real-World <span className="gradient-text">Impact</span>
           </h2>
-          <p className="text-white/50 text-lg max-w-2xl mx-auto">
+          <p className="text-foreground/50 text-lg max-w-2xl mx-auto">
             Systems built at enterprise scale — measured by reliability, performance, and business outcomes.
           </p>
         </motion.div>
@@ -82,21 +82,21 @@ export function CaseStudiesSection() {
                   </div>
                   <span className={`text-xs font-semibold uppercase tracking-widest ${col.text}`}>{c.label}</span>
                 </div>
-                <h3 className="text-white font-bold text-lg mb-3 leading-snug">{c.title}</h3>
-                <p className="text-white/45 text-sm leading-relaxed mb-5">{c.challenge}</p>
+                <h3 className="text-foreground font-bold text-lg mb-3 leading-snug">{c.title}</h3>
+                <p className="text-foreground/45 text-sm leading-relaxed mb-5">{c.challenge}</p>
 
                 <div className="space-y-2 mb-5">
                   {c.impact.map(m => (
                     <div key={m} className="flex items-center gap-2 text-sm">
                       <span className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${c.color === "blue" ? "bg-blue-400" : c.color === "cyan" ? "bg-cyan-400" : "bg-violet-400"}`} />
-                      <span className="text-white/60">{m}</span>
+                      <span className="text-foreground/60">{m}</span>
                     </div>
                   ))}
                 </div>
 
-                <div className="flex flex-wrap gap-1.5 mt-auto pt-4 border-t border-white/5">
+                <div className="flex flex-wrap gap-1.5 mt-auto pt-4 border-t border-border">
                   {c.tech.map(t => (
-                    <span key={t} className="text-xs px-2 py-1 rounded bg-white/5 text-white/40">{t}</span>
+                    <span key={t} className="text-xs px-2 py-1 rounded bg-muted text-foreground/40">{t}</span>
                   ))}
                 </div>
               </motion.div>
@@ -110,7 +110,7 @@ export function CaseStudiesSection() {
           viewport={{ once: true }}
           className="text-center mt-10"
         >
-          <Link href="/case-studies" className="inline-flex items-center gap-2 px-8 py-3.5 bg-white/5 hover:bg-white/10 text-white font-semibold rounded-lg border border-white/10 hover:border-white/20 transition-all">
+          <Link href="/case-studies" className="inline-flex items-center gap-2 px-8 py-3.5 bg-muted hover:bg-white/10 text-foreground font-semibold rounded-lg border border-border hover:border-white/20 transition-all">
             View All Case Studies <ArrowRight className="w-4 h-4" />
           </Link>
         </motion.div>

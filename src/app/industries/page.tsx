@@ -52,7 +52,7 @@ const industries = [
 
 export default function IndustriesPage() {
   return (
-    <div className="pt-32 pb-24 bg-[#020817] min-h-screen">
+    <div className="pt-32 pb-24 bg-[hsl(var(--background))] min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader 
           badge="Market Expertise"
@@ -70,19 +70,19 @@ export default function IndustriesPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="glass p-8 rounded-2xl border border-white/5 flex flex-col hover:border-blue-500/30 transition-all group"
+              className="glass p-8 rounded-2xl border border-border flex flex-col hover:border-blue-500/30 transition-all group"
             >
               <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <ind.icon className="w-6 h-6 text-blue-400" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">{ind.title}</h3>
-              <p className="text-white/50 text-sm leading-relaxed mb-6 flex-grow">
+              <h3 className="text-2xl font-bold text-foreground mb-4">{ind.title}</h3>
+              <p className="text-foreground/50 text-sm leading-relaxed mb-6 flex-grow">
                 {ind.description}
               </p>
               <div className="space-y-3 mb-8">
-                 <p className="text-xs font-semibold text-white/30 uppercase tracking-widest">Key Solutions</p>
+                 <p className="text-xs font-semibold text-foreground/30 uppercase tracking-widest">Key Solutions</p>
                  {ind.solutions.map(sol => (
-                   <div key={sol} className="flex items-center gap-2 text-xs text-white/70">
+                   <div key={sol} className="flex items-center gap-2 text-xs text-foreground/70">
                       <div className="w-1 h-1 rounded-full bg-blue-500" />
                       {sol}
                    </div>
@@ -99,10 +99,10 @@ export default function IndustriesPage() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-24 p-12 rounded-3xl bg-gradient-to-br from-blue-600/10 to-violet-600/10 border border-white/5 text-center"
+          className="mt-24 p-12 rounded-3xl bg-gradient-to-br from-blue-600/10 to-violet-600/10 border border-border text-center"
         >
-          <h2 className="text-2xl font-bold text-white mb-4">Don&apos;t see your industry?</h2>
-          <p className="text-white/60 mb-8 max-w-xl mx-auto">
+          <h2 className="text-2xl font-bold text-foreground mb-4">Don&apos;t see your industry?</h2>
+          <p className="text-foreground/60 mb-8 max-w-xl mx-auto">
             Our engineering fundamentals apply to any high-stakes, data-driven environment. We specialize in solving the &quot;unsolvable&quot; technical debt and scaling challenges.
           </p>
           <Button size="lg" href="/contact">Start a Technical Discussion</Button>

@@ -75,7 +75,7 @@ const industries = [
 
 export function IndustriesSection() {
   return (
-    <section className="py-24 bg-[#020817] relative overflow-hidden">
+    <section className="py-24 bg-[hsl(var(--background))] relative overflow-hidden">
       <div className="absolute inset-0 dot-pattern opacity-20" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
@@ -88,10 +88,10 @@ export function IndustriesSection() {
             <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
             Industries Served
           </div>
-          <h2 className="text-headline text-white mb-4">
+          <h2 className="text-headline text-foreground mb-4">
             Vertical <span className="gradient-text">Expertise</span>
           </h2>
-          <p className="text-white/50 text-lg max-w-2xl mx-auto">
+          <p className="text-foreground/50 text-lg max-w-2xl mx-auto">
             Deep domain knowledge across regulated and high-growth industries.
           </p>
         </motion.div>
@@ -110,11 +110,11 @@ export function IndustriesSection() {
               <div className={`w-11 h-11 rounded-xl ${ind.iconBg} flex items-center justify-center mb-4`}>
                 <ind.icon className={`w-5 h-5 ${ind.iconColor}`} />
               </div>
-              <h3 className="text-white font-semibold text-lg mb-2">{ind.title}</h3>
-              <p className="text-white/50 text-sm leading-relaxed mb-4">{ind.description}</p>
+              <h3 className="text-foreground font-semibold text-lg mb-2">{ind.title}</h3>
+              <p className="text-foreground/50 text-sm leading-relaxed mb-4">{ind.description}</p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {ind.tags.map(t => (
-                  <span key={t} className="text-xs px-2.5 py-1 rounded-full bg-white/5 text-white/40 border border-white/5">
+                  <span key={t} className="text-xs px-2.5 py-1 rounded-full bg-muted text-foreground/40 border border-border">
                     {t}
                   </span>
                 ))}

@@ -58,7 +58,7 @@ const allServices = [
 
 export default function ServicesPage() {
   return (
-    <div className="pt-32 pb-24 bg-[#020817] min-h-screen">
+    <div className="pt-32 pb-24 bg-[hsl(var(--background))] min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader 
           badge="Our Services"
@@ -82,18 +82,18 @@ export default function ServicesPage() {
                 <div className="w-16 h-16 rounded-2xl bg-blue-500/10 flex items-center justify-center">
                   <service.icon className="w-8 h-8 text-blue-400" />
                 </div>
-                <h2 className="text-3xl font-bold text-white">{service.title}</h2>
-                <p className="text-white/60 text-lg leading-relaxed">
+                <h2 className="text-3xl font-bold text-foreground">{service.title}</h2>
+                <p className="text-foreground/60 text-lg leading-relaxed">
                   {service.description}
                 </p>
                 <div className="grid sm:grid-cols-2 gap-6 pt-4">
                   {service.features.map((feature) => (
                     <div key={feature.title} className="space-y-2">
-                      <h4 className="text-white font-semibold flex items-center gap-2">
+                      <h4 className="text-foreground font-semibold flex items-center gap-2">
                         <CheckCircle className="w-4 h-4 text-blue-400" />
                         {feature.title}
                       </h4>
-                      <p className="text-white/40 text-sm">{feature.desc}</p>
+                      <p className="text-foreground/40 text-sm">{feature.desc}</p>
                     </div>
                   ))}
                 </div>
@@ -102,7 +102,7 @@ export default function ServicesPage() {
                 </div>
               </div>
               <div className="lg:w-1/2 relative">
-                 <div className="aspect-square rounded-3xl bg-gradient-to-br from-blue-500/10 to-violet-500/10 border border-white/5 flex items-center justify-center overflow-hidden">
+                 <div className="aspect-square rounded-3xl bg-gradient-to-br from-blue-500/10 to-violet-500/10 border border-border flex items-center justify-center overflow-hidden">
                     {/* Placeholder for architectural visual */}
                     <div className="absolute inset-0 grid-pattern opacity-20" />
                     <service.icon className="w-48 h-48 text-blue-500/20 blur-sm absolute" />

@@ -10,6 +10,7 @@ import {
   Twitter,
   Github,
   ArrowUpRight,
+  Phone,
 } from "lucide-react";
 
 const footerLinks = {
@@ -37,14 +38,14 @@ const footerLinks = {
 };
 
 const contacts = [
+  { icon: Phone, label: "(307) 219-4328", href: "tel:+13072194328" },
   { icon: Mail, label: "info@solidlabsai.com", href: "mailto:info@solidlabsai.com" },
-  { icon: Mail, label: "support@solidlabsai.com", href: "mailto:support@solidlabsai.com" },
-  { icon: MapPin, label: "United States", href: "#" },
+  { icon: MapPin, label: "USA | India", href: "#" },
 ];
 
 export function Footer() {
   return (
-    <footer className="relative bg-[#020817] border-t border-white/5 overflow-hidden">
+    <footer className="relative bg-[hsl(var(--background))] border-t border-border overflow-hidden">
       {/* Ambient glow */}
       <div className="absolute bottom-0 left-1/4 w-96 h-64 bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 right-1/4 w-64 h-48 bg-violet-600/5 rounded-full blur-3xl pointer-events-none" />
@@ -60,7 +61,7 @@ export function Footer() {
                 <Zap className="relative z-10 w-4 h-4 text-white" />
               </div>
               <div>
-                <span className="text-white font-bold text-lg tracking-tight">
+                <span className="text-foreground font-bold text-lg tracking-tight">
                   SolidLabs
                 </span>
                 <span className="text-blue-400 font-light text-lg tracking-tight ml-1">
@@ -68,7 +69,7 @@ export function Footer() {
                 </span>
               </div>
             </Link>
-            <p className="text-white/50 text-sm leading-relaxed max-w-xs">
+            <p className="text-foreground/50 text-sm leading-relaxed max-w-xs">
               Production-scale AI, Data Platform, Cloud Engineering, and Product Development
               for enterprise, healthcare, federal, and AI startup clients.
             </p>
@@ -79,7 +80,7 @@ export function Footer() {
                 <a
                   key={label}
                   href={href}
-                  className="flex items-center gap-2 text-white/40 hover:text-blue-400 text-sm transition-colors"
+                  className="flex items-center gap-2 text-foreground/40 hover:text-blue-400 text-sm transition-colors"
                 >
                   <Icon className="w-3.5 h-3.5 flex-shrink-0" />
                   {label}
@@ -100,7 +101,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="w-8 h-8 flex items-center justify-center rounded-lg bg-white/5 hover:bg-blue-500/20 text-white/40 hover:text-blue-400 transition-all"
+                  className="w-8 h-8 flex items-center justify-center rounded-lg bg-muted hover:bg-blue-500/20 text-foreground/40 hover:text-blue-400 transition-all"
                 >
                   <Icon className="w-4 h-4" />
                 </a>
@@ -111,7 +112,7 @@ export function Footer() {
           {/* Nav columns */}
           {Object.entries(footerLinks).map(([group, links]) => (
             <div key={group}>
-              <h4 className="text-white/80 text-xs font-semibold uppercase tracking-widest mb-4">
+              <h4 className="text-foreground/80 text-xs font-semibold uppercase tracking-widest mb-4">
                 {group}
               </h4>
               <ul className="space-y-2.5">
@@ -119,7 +120,7 @@ export function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-white/40 hover:text-white text-sm transition-colors inline-flex items-center gap-1 group"
+                      className="text-foreground/40 hover:text-foreground text-sm transition-colors inline-flex items-center gap-1 group"
                     >
                       {link.label}
                       <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all" />
@@ -132,16 +133,16 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-white/5 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-white/30 text-sm">
-            © {new Date().getFullYear()} SolidLabs Solutions. All rights reserved.
+        <div className="border-t border-border py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-foreground/30 text-sm">
+            © {new Date().getFullYear()} Solid Labs LLC. All rights reserved.
           </p>
           <div className="flex items-center gap-5">
             {["Privacy Policy", "Terms of Service", "Security"].map((item) => (
               <Link
                 key={item}
                 href="#"
-                className="text-white/30 hover:text-white/60 text-xs transition-colors"
+                className="text-foreground/30 hover:text-foreground/60 text-xs transition-colors"
               >
                 {item}
               </Link>

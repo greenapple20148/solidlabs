@@ -35,13 +35,13 @@ const differentiators = [
 
 export default function CapabilityPage() {
   return (
-    <div className="pt-32 pb-24 bg-[#020817] min-h-screen">
+    <div className="pt-32 pb-24 bg-[hsl(var(--background))] min-h-screen">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-16 flex flex-col md:flex-row justify-between items-start md:items-end gap-6 border-b border-white/10 pb-12">
+        <div className="mb-16 flex flex-col md:flex-row justify-between items-start md:items-end gap-6 border-b border-border pb-12">
            <div>
               <div className="enterprise-badge mb-4">Federal Contractor Profile</div>
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Capability Statement</h1>
-              <p className="text-white/50 text-lg">SolidLabs Solutions | CAGE: [PENDING] | UEI: [PENDING]</p>
+              <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Capability Statement</h1>
+              <p className="text-foreground/50 text-lg">SolidLabs Solutions | CAGE: [PENDING] | UEI: [PENDING]</p>
            </div>
            <Button size="lg" icon={<Download className="w-4 h-4" />}>Download PDF Version</Button>
         </div>
@@ -49,8 +49,8 @@ export default function CapabilityPage() {
         <div className="space-y-16">
            {/* Section 1: Intro */}
            <section>
-              <h2 className="text-2xl font-bold text-white mb-6 border-l-4 border-blue-500 pl-4">Company Overview</h2>
-              <p className="text-white/60 leading-relaxed text-lg">
+              <h2 className="text-2xl font-bold text-foreground mb-6 border-l-4 border-blue-500 pl-4">Company Overview</h2>
+              <p className="text-foreground/60 leading-relaxed text-lg">
                  SolidLabs Solutions is a specialized technology firm providing high-end engineering services for enterprise, healthcare, and federal clients. We bridge the gap between complex data science and production-scale software engineering, delivering resilient architectures that power mission-critical operations.
               </p>
            </section>
@@ -58,10 +58,10 @@ export default function CapabilityPage() {
            {/* Section 2: Competencies */}
            <section className="grid md:grid-cols-2 gap-12">
               <div>
-                 <h2 className="text-2xl font-bold text-white mb-6 border-l-4 border-blue-500 pl-4">Core Competencies</h2>
+                 <h2 className="text-2xl font-bold text-foreground mb-6 border-l-4 border-blue-500 pl-4">Core Competencies</h2>
                  <ul className="space-y-4">
                     {coreCompetencies.map(cc => (
-                      <li key={cc} className="flex items-start gap-3 text-white/70">
+                      <li key={cc} className="flex items-start gap-3 text-foreground/70">
                          <CheckCircle className="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" />
                          <span>{cc}</span>
                       </li>
@@ -69,26 +69,26 @@ export default function CapabilityPage() {
                  </ul>
               </div>
               
-              <div className="glass p-8 rounded-2xl border border-white/5 bg-blue-500/[0.02]">
-                 <h2 className="text-xl font-bold text-white mb-6">Codes & Classifications</h2>
+              <div className="glass p-8 rounded-2xl border border-border bg-blue-500/[0.02]">
+                 <h2 className="text-xl font-bold text-foreground mb-6">Codes & Classifications</h2>
                  <div className="space-y-4">
-                    <div className="pb-4 border-b border-white/5">
-                       <p className="text-xs font-bold text-white/30 uppercase tracking-widest mb-2">NAICS Codes</p>
+                    <div className="pb-4 border-b border-border">
+                       <p className="text-xs font-bold text-foreground/30 uppercase tracking-widest mb-2">NAICS Codes</p>
                        <div className="grid grid-cols-1 gap-2">
                           {naicsCodes.slice(0, 5).map(nc => (
                             <div key={nc.code} className="flex justify-between text-sm">
                                <span className="text-blue-400 font-mono">{nc.code}</span>
-                               <span className="text-white/50 truncate max-w-[200px]">{nc.label}</span>
+                               <span className="text-foreground/50 truncate max-w-[200px]">{nc.label}</span>
                             </div>
                           ))}
                        </div>
                     </div>
                     <div>
-                       <p className="text-xs font-bold text-white/30 uppercase tracking-widest mb-2">Certifications</p>
+                       <p className="text-xs font-bold text-foreground/30 uppercase tracking-widest mb-2">Certifications</p>
                        <div className="flex flex-wrap gap-2">
-                          <span className="px-2 py-1 bg-white/5 rounded text-xs text-white/60">SBA Certified Small Business</span>
-                          <span className="px-2 py-1 bg-white/5 rounded text-xs text-white/60">HubZone [In Progress]</span>
-                          <span className="px-2 py-1 bg-white/5 rounded text-xs text-white/60">SOC 2 Type II Ready</span>
+                          <span className="px-2 py-1 bg-muted rounded text-xs text-foreground/60">SBA Certified Small Business</span>
+                          <span className="px-2 py-1 bg-muted rounded text-xs text-foreground/60">HubZone [In Progress]</span>
+                          <span className="px-2 py-1 bg-muted rounded text-xs text-foreground/60">SOC 2 Type II Ready</span>
                        </div>
                     </div>
                  </div>
@@ -97,12 +97,12 @@ export default function CapabilityPage() {
 
            {/* Section 3: Differentiators */}
            <section>
-              <h2 className="text-2xl font-bold text-white mb-8 border-l-4 border-blue-500 pl-4">Differentiators</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-8 border-l-4 border-blue-500 pl-4">Differentiators</h2>
               <div className="grid md:grid-cols-2 gap-8">
                  {differentiators.map((d, i) => (
-                   <div key={d.title} className="p-6 rounded-xl bg-white/[0.01] border border-white/5">
-                      <h3 className="text-white font-bold mb-2">{d.title}</h3>
-                      <p className="text-white/40 text-sm leading-relaxed">{d.desc}</p>
+                   <div key={d.title} className="p-6 rounded-xl bg-white/[0.01] border border-border">
+                      <h3 className="text-foreground font-bold mb-2">{d.title}</h3>
+                      <p className="text-foreground/40 text-sm leading-relaxed">{d.desc}</p>
                    </div>
                  ))}
               </div>
@@ -110,8 +110,8 @@ export default function CapabilityPage() {
 
            {/* Section 4: Contact */}
            <section className="bg-blue-600/5 border border-blue-500/20 p-10 rounded-3xl text-center">
-              <h2 className="text-2xl font-bold text-white mb-4">Procurement & Teaming</h2>
-              <p className="text-white/60 mb-8 max-w-2xl mx-auto">
+              <h2 className="text-2xl font-bold text-foreground mb-4">Procurement & Teaming</h2>
+              <p className="text-foreground/60 mb-8 max-w-2xl mx-auto">
                  SolidLabs is seeking prime and sub-contracting opportunities in AI modernization, cloud infrastructure, and data platform initiatives across Federal and State agencies.
               </p>
               <div className="flex flex-wrap justify-center gap-4">

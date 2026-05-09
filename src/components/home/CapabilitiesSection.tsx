@@ -91,7 +91,7 @@ const item = {
 
 export function CapabilitiesSection() {
   return (
-    <section className="py-24 bg-[#020817] relative overflow-hidden">
+    <section className="py-24 bg-[hsl(var(--background))] relative overflow-hidden">
       <div className="absolute inset-0 dot-pattern opacity-30" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
@@ -106,11 +106,11 @@ export function CapabilitiesSection() {
             <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
             Trusted Expertise
           </div>
-          <h2 className="text-headline text-white mb-4">
+          <h2 className="text-headline text-foreground mb-4">
             Built for{" "}
             <span className="gradient-text">Enterprise Scale</span>
           </h2>
-          <p className="text-white/50 text-lg max-w-2xl mx-auto">
+          <p className="text-foreground/50 text-lg max-w-2xl mx-auto">
             Deep technical expertise across every layer of the modern enterprise
             technology stack.
           </p>
@@ -137,10 +137,10 @@ export function CapabilitiesSection() {
               >
                 <cap.icon className={`w-5 h-5 ${cap.iconColor}`} />
               </div>
-              <h3 className="text-white font-semibold text-lg mb-2">
+              <h3 className="text-foreground font-semibold text-lg mb-2">
                 {cap.title}
               </h3>
-              <p className="text-white/50 text-sm leading-relaxed">
+              <p className="text-foreground/50 text-sm leading-relaxed">
                 {cap.description}
               </p>
 

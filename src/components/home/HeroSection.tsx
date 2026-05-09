@@ -27,7 +27,7 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#020817]">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[hsl(var(--background))]">
       {/* Animated grid background */}
       <div className="absolute inset-0 grid-pattern opacity-40" />
 
@@ -79,7 +79,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-display text-white mb-6"
+            className="text-display text-foreground mb-6"
           >
             Production-Scale{" "}
             <span className="gradient-text">AI & Data Platform</span>{" "}
@@ -91,7 +91,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-subheadline text-white/50 max-w-2xl mx-auto mb-10"
+            className="text-subheadline text-foreground/50 max-w-2xl mx-auto mb-10"
           >
             SolidLabs Solutions helps enterprises modernize AI systems, cloud
             infrastructure, analytics platforms, and digital products at scale.
@@ -106,14 +106,14 @@ export function HeroSection() {
           >
             <Link
               href="/contact"
-              className="flex items-center gap-2 px-8 py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-lg transition-all shadow-lg shadow-blue-600/30 hover:shadow-blue-500/50 hover:-translate-y-0.5"
+              className="flex items-center gap-2 px-8 py-3.5 bg-blue-600 hover:bg-blue-500 text-foreground font-semibold rounded-lg transition-all shadow-lg shadow-blue-600/30 hover:shadow-blue-500/50 hover:-translate-y-0.5"
             >
               <Calendar className="w-4 h-4" />
               Schedule Consultation
             </Link>
             <Link
               href="/services"
-              className="flex items-center gap-2 px-8 py-3.5 bg-white/5 hover:bg-white/10 text-white font-semibold rounded-lg border border-white/10 hover:border-white/20 transition-all hover:-translate-y-0.5"
+              className="flex items-center gap-2 px-8 py-3.5 bg-muted hover:bg-white/10 text-foreground font-semibold rounded-lg border border-border hover:border-white/20 transition-all hover:-translate-y-0.5"
             >
               View Services
               <ArrowRight className="w-4 h-4" />
@@ -136,10 +136,10 @@ export function HeroSection() {
                 className="glass rounded-xl p-4 text-center animate-float"
                 style={{ animationDelay: `${i * 0.5}s` }}
               >
-                <div className="text-2xl font-bold text-white stat-number">
+                <div className="text-2xl font-bold text-foreground stat-number">
                   {stat.value}
                 </div>
-                <div className="text-xs text-white/40 mt-1">{stat.label}</div>
+                <div className="text-xs text-foreground/40 mt-1">{stat.label}</div>
               </motion.div>
             ))}
           </motion.div>
@@ -152,14 +152,14 @@ export function HeroSection() {
           transition={{ delay: 1.5 }}
           className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
         >
-          <span className="text-xs text-white/30 uppercase tracking-widest">
+          <span className="text-xs text-foreground/30 uppercase tracking-widest">
             Scroll
           </span>
           <motion.div
             animate={{ y: [0, 6, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
           >
-            <ChevronDown className="w-4 h-4 text-white/30" />
+            <ChevronDown className="w-4 h-4 text-foreground/30" />
           </motion.div>
         </motion.div>
       </div>

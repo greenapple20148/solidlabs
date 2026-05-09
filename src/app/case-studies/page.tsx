@@ -70,7 +70,7 @@ const caseStudies = [
 
 export default function CaseStudiesPage() {
   return (
-    <div className="pt-32 pb-24 bg-[#020817] min-h-screen">
+    <div className="pt-32 pb-24 bg-[hsl(var(--background))] min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader 
           badge="Proven Impact"
@@ -88,19 +88,19 @@ export default function CaseStudiesPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="glass rounded-3xl border border-white/5 overflow-hidden flex flex-col lg:flex-row group"
+              className="glass rounded-3xl border border-border overflow-hidden flex flex-col lg:flex-row group"
             >
-              <div className="lg:w-1/3 p-8 lg:p-12 bg-white/[0.01] border-b lg:border-b-0 lg:border-r border-white/5 flex flex-col">
+              <div className="lg:w-1/3 p-8 lg:p-12 bg-white/[0.01] border-b lg:border-b-0 lg:border-r border-border flex flex-col">
                  <div className="flex items-center gap-2 mb-6">
                     <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
                     <span className="text-xs font-bold uppercase tracking-widest text-blue-400">{cs.label}</span>
                  </div>
-                 <h3 className="text-2xl font-bold text-white mb-6 leading-tight">{cs.title}</h3>
+                 <h3 className="text-2xl font-bold text-foreground mb-6 leading-tight">{cs.title}</h3>
                  <div className="mt-auto pt-8">
-                    <p className="text-xs font-semibold text-white/30 uppercase tracking-widest mb-4">Technologies</p>
+                    <p className="text-xs font-semibold text-foreground/30 uppercase tracking-widest mb-4">Technologies</p>
                     <div className="flex flex-wrap gap-2">
                        {cs.tech.map(t => (
-                         <span key={t} className="px-2.5 py-1 rounded-md bg-white/5 border border-white/5 text-white/50 text-xs">
+                         <span key={t} className="px-2.5 py-1 rounded-md bg-muted border border-border text-foreground/50 text-xs">
                            {t}
                          </span>
                        ))}
@@ -110,20 +110,20 @@ export default function CaseStudiesPage() {
               
               <div className="lg:w-2/3 p-8 lg:p-12 space-y-10">
                  <div>
-                    <h4 className="text-sm font-bold text-white/80 uppercase tracking-widest mb-4">The Challenge</h4>
-                    <p className="text-white/50 leading-relaxed">{cs.challenge}</p>
+                    <h4 className="text-sm font-bold text-foreground/80 uppercase tracking-widest mb-4">The Challenge</h4>
+                    <p className="text-foreground/50 leading-relaxed">{cs.challenge}</p>
                  </div>
                  
                  <div className="grid md:grid-cols-2 gap-10">
                     <div>
-                       <h4 className="text-sm font-bold text-white/80 uppercase tracking-widest mb-4">Architecture</h4>
-                       <p className="text-white/50 text-sm leading-relaxed">{cs.architecture}</p>
+                       <h4 className="text-sm font-bold text-foreground/80 uppercase tracking-widest mb-4">Architecture</h4>
+                       <p className="text-foreground/50 text-sm leading-relaxed">{cs.architecture}</p>
                     </div>
                     <div>
-                       <h4 className="text-sm font-bold text-white/80 uppercase tracking-widest mb-4">Business Impact</h4>
+                       <h4 className="text-sm font-bold text-foreground/80 uppercase tracking-widest mb-4">Business Impact</h4>
                        <ul className="space-y-3">
                           {cs.results.map(r => (
-                            <li key={r} className="flex items-start gap-3 text-sm text-white/70">
+                            <li key={r} className="flex items-start gap-3 text-sm text-foreground/70">
                                <CheckCircle className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
                                {r}
                             </li>

@@ -19,7 +19,7 @@ const techItems = [
 
 export function TechStackSection() {
   return (
-    <section className="py-24 bg-[#020817] relative overflow-hidden">
+    <section className="py-24 bg-[hsl(var(--background))] relative overflow-hidden">
       <div className="absolute inset-0 dot-pattern opacity-20" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
@@ -32,11 +32,11 @@ export function TechStackSection() {
             <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
             Technology Stack
           </div>
-          <h2 className="text-headline text-white mb-4">
+          <h2 className="text-headline text-foreground mb-4">
             Built on{" "}
             <span className="gradient-text">Best-in-Class</span> Technology
           </h2>
-          <p className="text-white/50 text-lg max-w-xl mx-auto">
+          <p className="text-foreground/50 text-lg max-w-xl mx-auto">
             We engineer with the tools that power the world&apos;s most demanding systems.
           </p>
         </motion.div>
@@ -53,7 +53,7 @@ export function TechStackSection() {
                 y: -6,
                 boxShadow: `0 0 30px ${tech.color}30`,
               }}
-              className="group relative rounded-xl border border-white/5 bg-white/[0.02] p-5 flex flex-col items-center gap-3 cursor-default transition-all duration-300"
+              className="group relative rounded-xl border border-border bg-white/[0.02] p-5 flex flex-col items-center gap-3 cursor-default transition-all duration-300"
             >
               {/* Color dot accent */}
               <div
@@ -66,7 +66,7 @@ export function TechStackSection() {
               >
                 {tech.abbr.slice(0, 2)}
               </div>
-              <span className="text-white/50 text-xs font-medium group-hover:text-white transition-colors text-center">
+              <span className="text-foreground/50 text-xs font-medium group-hover:text-foreground transition-colors text-center">
                 {tech.name}
               </span>
 

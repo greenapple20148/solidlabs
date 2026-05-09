@@ -34,18 +34,18 @@ export function SectionHeader({
     >
       {badge && (
         <div className="enterprise-badge mb-4 inline-flex">
-          <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
+          <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
           {badge}
         </div>
       )}
-      <h2 className="text-headline text-white mb-4">
+      <h2 className="text-headline text-foreground mb-4">
         {title}{" "}
         {titleHighlight && (
           <span className="gradient-text">{titleHighlight}</span>
         )}
       </h2>
       {subtitle && (
-        <p className="text-subheadline text-white/50">{subtitle}</p>
+        <p className="text-subheadline text-muted-foreground">{subtitle}</p>
       )}
     </motion.div>
   );
