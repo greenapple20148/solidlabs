@@ -59,7 +59,7 @@ export default function BlogPage() {
            />
            
            <div className="relative w-full md:w-72">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-foreground/30" />
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
               <input 
                 type="text" 
                 placeholder="Search articles..." 
@@ -75,12 +75,12 @@ export default function BlogPage() {
           className="relative rounded-3xl overflow-hidden border border-border bg-gradient-to-br from-blue-600/10 to-transparent p-8 lg:p-16 mb-16 group cursor-pointer"
         >
            <div className="absolute top-0 right-0 p-8">
-              <ArrowUpRight className="w-8 h-8 text-foreground/20 group-hover:text-blue-400 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />
+              <ArrowUpRight className="w-8 h-8 text-muted-foreground group-hover:text-blue-400 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />
            </div>
            <div className="max-w-2xl relative z-10">
               <div className="flex items-center gap-3 mb-6">
                  <span className="px-3 py-1 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold uppercase tracking-widest border border-blue-500/20">Featured Insight</span>
-                 <span className="text-foreground/30 text-sm">May 20, 2024</span>
+                 <span className="text-muted-foreground text-sm">May 20, 2024</span>
               </div>
               <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
                  Architecting for Reliability: Why &quot;Scale&quot; is More Than Just More Servers
@@ -94,7 +94,7 @@ export default function BlogPage() {
                  </div>
                  <div>
                     <div className="text-foreground font-bold text-sm">SolidLabs Solutions Team</div>
-                    <div className="text-foreground/30 text-xs">Technical Strategy</div>
+                    <div className="text-muted-foreground text-xs">Technical Strategy</div>
                  </div>
               </div>
            </div>
@@ -115,16 +115,16 @@ export default function BlogPage() {
              >
                 <div className="flex justify-between items-start mb-6">
                    <span className="text-xs font-bold uppercase tracking-widest text-blue-400">{post.tag}</span>
-                   <ArrowUpRight className="w-4 h-4 text-foreground/20 group-hover:text-blue-400 transition-all" />
+                   <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-blue-400 transition-all" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-4 group-hover:text-blue-100 transition-colors">{post.title}</h3>
-                <p className="text-foreground/40 text-sm leading-relaxed mb-8 flex-grow">{post.excerpt}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-8 flex-grow">{post.excerpt}</p>
                 <div className="pt-6 border-t border-border flex items-center justify-between">
-                   <div className="flex items-center gap-2 text-foreground/30 text-xs">
+                   <div className="flex items-center gap-2 text-muted-foreground text-xs">
                       <Calendar className="w-3 h-3" />
                       {post.date}
                    </div>
-                   <div className="flex items-center gap-2 text-foreground/30 text-xs">
+                   <div className="flex items-center gap-2 text-muted-foreground text-xs">
                       <Clock className="w-3 h-3" />
                       {post.readTime}
                    </div>
@@ -136,7 +136,7 @@ export default function BlogPage() {
         {/* Newsletter Callout */}
         <div className="mt-24 rounded-3xl border border-border bg-white/[0.01] p-12 text-center">
            <h2 className="text-2xl font-bold text-foreground mb-4">Stay at the Cutting Edge</h2>
-           <p className="text-foreground/50 mb-8 max-w-xl mx-auto">Subscribe to our monthly technical digest for insights on AI, cloud architecture, and enterprise engineering.</p>
+           <p className="text-muted-foreground mb-8 max-w-xl mx-auto">Subscribe to our monthly technical digest for insights on AI, cloud architecture, and enterprise engineering.</p>
            <div className="flex flex-col sm:flex-row justify-center gap-4 max-w-md mx-auto">
               <input 
                 type="email" 

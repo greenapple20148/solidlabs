@@ -33,8 +33,8 @@ export default function ContactPage() {
               </div>
               <h3 className="text-foreground font-bold mb-4">Email Us</h3>
               <div className="space-y-2">
-                 <a href="mailto:info@solidlabsai.com" className="block text-foreground/50 hover:text-blue-400 transition-colors">info@solidlabsai.com</a>
-                 <a href="mailto:support@solidlabsai.com" className="block text-foreground/50 hover:text-blue-400 transition-colors">support@solidlabsai.com</a>
+                 <a href="mailto:info@solidlabsai.com" className="block text-muted-foreground hover:text-blue-400 transition-colors">info@solidlabsai.com</a>
+                 <a href="mailto:support@solidlabsai.com" className="block text-muted-foreground hover:text-blue-400 transition-colors">support@solidlabsai.com</a>
               </div>
            </motion.div>
            
@@ -49,7 +49,7 @@ export default function ContactPage() {
                  <MapPin className="w-6 h-6 text-blue-400" />
               </div>
               <h3 className="text-foreground font-bold mb-4">Our Presence</h3>
-              <p className="text-foreground/50 leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed">
                  United States | India<br />
                  Distributed Team of Elite Engineers
               </p>
@@ -67,13 +67,13 @@ export default function ContactPage() {
               </div>
               <h3 className="text-foreground font-bold mb-4">Social Connect</h3>
               <div className="flex justify-center gap-4 mt-2">
-                 <a href="https://linkedin.com/company/solidlabs-solutions" target="_blank" className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center hover:bg-blue-500/20 transition-all text-foreground/50 hover:text-blue-400">
+                 <a href="https://linkedin.com/company/solidlabs-solutions" target="_blank" className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center hover:bg-blue-500/20 transition-all text-muted-foreground hover:text-blue-400">
                     <Linkedin className="w-5 h-5" />
                  </a>
-                 <a href="https://twitter.com/solidlabsai" target="_blank" className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center hover:bg-blue-500/20 transition-all text-foreground/50 hover:text-blue-400">
+                 <a href="https://twitter.com/solidlabsai" target="_blank" className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center hover:bg-blue-500/20 transition-all text-muted-foreground hover:text-blue-400">
                     <Twitter className="w-5 h-5" />
                  </a>
-                 <a href="https://github.com/solidlabsai" target="_blank" className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center hover:bg-blue-500/20 transition-all text-foreground/50 hover:text-blue-400">
+                 <a href="https://github.com/solidlabsai" target="_blank" className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center hover:bg-blue-500/20 transition-all text-muted-foreground hover:text-blue-400">
                     <Github className="w-5 h-5" />
                  </a>
               </div>

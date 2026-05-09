@@ -76,7 +76,7 @@ export default function AboutPage() {
               {stats.map((stat, i) => (
                 <div key={stat.label} className="glass p-8 rounded-2xl border border-border text-center">
                    <div className="text-4xl font-bold text-blue-400 mb-2">{stat.value}</div>
-                   <div className="text-foreground/40 text-sm font-medium uppercase tracking-widest">{stat.label}</div>
+                   <div className="text-muted-foreground text-sm font-medium uppercase tracking-widest">{stat.label}</div>
                 </div>
               ))}
            </motion.div>
@@ -86,7 +86,7 @@ export default function AboutPage() {
         <div className="mb-32">
            <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-foreground mb-4">Our Core Values</h2>
-              <p className="text-foreground/50 max-w-xl mx-auto">The principles that guide every architectural decision we make.</p>
+              <p className="text-muted-foreground max-w-xl mx-auto">The principles that guide every architectural decision we make.</p>
            </div>
            
            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -97,13 +97,13 @@ export default function AboutPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="p-6 rounded-2xl bg-white/[0.02] border border-border hover:border-blue-500/20 transition-all"
+                  className="p-6 rounded-2xl bg-secondary border border-border hover:border-blue-500/20 transition-all"
                 >
                   <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center mb-6">
                     <v.icon className="w-6 h-6 text-blue-400" />
                   </div>
                   <h3 className="text-xl font-bold text-foreground mb-3">{v.title}</h3>
-                  <p className="text-foreground/40 text-sm leading-relaxed">{v.description}</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{v.description}</p>
                 </motion.div>
               ))}
            </div>

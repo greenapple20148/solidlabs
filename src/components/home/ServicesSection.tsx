@@ -114,7 +114,7 @@ const checkMap: Record<string, string> = {
 
 export function ServicesSection() {
   return (
-    <section className="py-24 bg-[#030b1a] relative overflow-hidden">
+    <section className="py-24 bg-[hsl(var(--background))] relative overflow-hidden">
       <div className="absolute inset-0 grid-pattern opacity-20" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
@@ -133,7 +133,7 @@ export function ServicesSection() {
             Enterprise-Grade{" "}
             <span className="gradient-text">Solutions</span>
           </h2>
-          <p className="text-foreground/50 text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             From AI infrastructure to cloud platforms — we architect, build, and scale
             the systems that power modern enterprises.
           </p>
@@ -162,7 +162,7 @@ export function ServicesSection() {
                     >
                       <svc.icon className={`w-6 h-6 ${colorMap[svc.color]}`} />
                     </div>
-                    <span className="text-foreground/20 text-4xl font-bold">
+                    <span className="text-muted-foreground text-4xl font-bold">
                       {svc.label}
                     </span>
                   </div>
@@ -174,7 +174,7 @@ export function ServicesSection() {
                   <h3 className="text-2xl font-bold text-foreground mb-4">
                     {svc.title}
                   </h3>
-                  <p className="text-foreground/50 leading-relaxed mb-6">
+                  <p className="text-muted-foreground leading-relaxed mb-6">
                     {svc.description}
                   </p>
                   <Link
@@ -186,8 +186,8 @@ export function ServicesSection() {
                 </div>
 
                 {/* Right panel — features */}
-                <div className="p-8 lg:p-10 border-t lg:border-t-0 lg:border-l border-border bg-white/[0.02]">
-                  <p className="text-xs font-semibold text-foreground/30 uppercase tracking-widest mb-5">
+                <div className="p-8 lg:p-10 border-t lg:border-t-0 lg:border-l border-border bg-secondary">
+                  <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-5">
                     Capabilities
                   </p>
                   <ul className="space-y-3">
@@ -223,7 +223,7 @@ export function ServicesSection() {
         >
           <Link
             href="/services"
-            className="inline-flex items-center gap-2 px-8 py-3.5 bg-muted hover:bg-white/10 text-foreground font-semibold rounded-lg border border-border hover:border-white/20 transition-all"
+            className="inline-flex items-center gap-2 px-8 py-3.5 bg-muted hover:bg-muted text-foreground font-semibold rounded-lg border border-border hover:border-white/20 transition-all"
           >
             View All Services <ArrowRight className="w-4 h-4" />
           </Link>

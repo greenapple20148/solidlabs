@@ -93,7 +93,7 @@ export default function ServicesPage() {
                         <CheckCircle className="w-4 h-4 text-blue-400" />
                         {feature.title}
                       </h4>
-                      <p className="text-foreground/40 text-sm">{feature.desc}</p>
+                      <p className="text-muted-foreground text-sm">{feature.desc}</p>
                     </div>
                   ))}
                 </div>

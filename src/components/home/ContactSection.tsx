@@ -94,7 +94,7 @@ export function ContactSection() {
               Talk to a{" "}
               <span className="gradient-text">Solutions Architect</span>
             </h2>
-            <p className="text-foreground/50 text-lg mb-8 leading-relaxed">
+            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
               Tell us about your project and we&apos;ll connect you with a senior
               engineer who specializes in your domain.
             </p>
@@ -135,13 +135,13 @@ export function ContactSection() {
                 <a
                   key={label}
                   href={href}
-                  className="flex items-center gap-4 p-4 rounded-xl border border-border bg-white/[0.02] hover:bg-white/[0.04] hover:border-blue-500/30 transition-all group"
+                  className="flex items-center gap-4 p-4 rounded-xl border border-border bg-secondary hover:bg-secondary hover:border-blue-500/30 transition-all group"
                 >
                   <div className="w-9 h-9 rounded-lg bg-blue-500/10 flex items-center justify-center flex-shrink-0">
                     <Icon className="w-4 h-4 text-blue-400" />
                   </div>
                   <div>
-                    <p className="text-foreground/40 text-xs">{label}</p>
+                    <p className="text-muted-foreground text-xs">{label}</p>
                     <p className="text-foreground/80 text-sm font-medium group-hover:text-foreground transition-colors">{value}</p>
                   </div>
                 </a>
@@ -154,7 +154,7 @@ export function ContactSection() {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="relative rounded-2xl border border-border bg-white/[0.02] p-8"
+            className="relative rounded-2xl border border-border bg-secondary p-8"
           >
             {submitted ? (
               <motion.div
@@ -166,29 +166,29 @@ export function ContactSection() {
                   <CheckCircle className="w-8 h-8 text-blue-400" />
                 </div>
                 <h3 className="text-foreground font-bold text-xl mb-2">Message Received</h3>
-                <p className="text-foreground/50">A solutions architect will reach out within 24 hours.</p>
+                <p className="text-muted-foreground">A solutions architect will reach out within 24 hours.</p>
               </motion.div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs text-foreground/40 mb-1.5 uppercase tracking-wider">Name *</label>
-                    <input name="name" required type="text" placeholder="John Smith" className="w-full px-4 py-3 rounded-lg bg-muted border border-border text-foreground placeholder-white/25 text-sm focus:outline-none focus:border-blue-500/50 focus:bg-white/[0.06] transition-all" />
+                    <label className="block text-xs text-muted-foreground mb-1.5 uppercase tracking-wider">Name *</label>
+                    <input name="name" required type="text" placeholder="John Smith" className="w-full px-4 py-3 rounded-lg bg-muted border border-border text-foreground placeholder-foreground/30 text-sm focus:outline-none focus:border-blue-500/50 focus:bg-white/[0.06] transition-all" />
                   </div>
                   <div>
-                    <label className="block text-xs text-foreground/40 mb-1.5 uppercase tracking-wider">Company *</label>
-                    <input name="company" required type="text" placeholder="Acme Corp" className="w-full px-4 py-3 rounded-lg bg-muted border border-border text-foreground placeholder-white/25 text-sm focus:outline-none focus:border-blue-500/50 focus:bg-white/[0.06] transition-all" />
+                    <label className="block text-xs text-muted-foreground mb-1.5 uppercase tracking-wider">Company *</label>
+                    <input name="company" required type="text" placeholder="Acme Corp" className="w-full px-4 py-3 rounded-lg bg-muted border border-border text-foreground placeholder-foreground/30 text-sm focus:outline-none focus:border-blue-500/50 focus:bg-white/[0.06] transition-all" />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-xs text-foreground/40 mb-1.5 uppercase tracking-wider">Email *</label>
-                  <input name="email" required type="email" placeholder="john@company.com" className="w-full px-4 py-3 rounded-lg bg-muted border border-border text-foreground placeholder-white/25 text-sm focus:outline-none focus:border-blue-500/50 focus:bg-white/[0.06] transition-all" />
+                  <label className="block text-xs text-muted-foreground mb-1.5 uppercase tracking-wider">Email *</label>
+                  <input name="email" required type="email" placeholder="john@company.com" className="w-full px-4 py-3 rounded-lg bg-muted border border-border text-foreground placeholder-foreground/30 text-sm focus:outline-none focus:border-blue-500/50 focus:bg-white/[0.06] transition-all" />
                 </div>
 
                 <div>
-                  <label className="block text-xs text-foreground/40 mb-1.5 uppercase tracking-wider">Project Type</label>
-                  <select name="projectType" className="w-full px-4 py-3 rounded-lg bg-[#030b1a] border border-border text-foreground/70 text-sm focus:outline-none focus:border-blue-500/50 transition-all">
+                  <label className="block text-xs text-muted-foreground mb-1.5 uppercase tracking-wider">Project Type</label>
+                  <select name="projectType" className="w-full px-4 py-3 rounded-lg bg-[hsl(var(--background))] border border-border text-foreground/70 text-sm focus:outline-none focus:border-blue-500/50 transition-all">
                     <option value="">Select project type...</option>
                     {projectTypes.map(t => <option key={t} value={t}>{t}</option>)}
                   </select>
@@ -196,15 +196,15 @@ export function ContactSection() {
 
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs text-foreground/40 mb-1.5 uppercase tracking-wider">Budget Range</label>
-                    <select name="budget" className="w-full px-4 py-3 rounded-lg bg-[#030b1a] border border-border text-foreground/70 text-sm focus:outline-none focus:border-blue-500/50 transition-all">
+                    <label className="block text-xs text-muted-foreground mb-1.5 uppercase tracking-wider">Budget Range</label>
+                    <select name="budget" className="w-full px-4 py-3 rounded-lg bg-[hsl(var(--background))] border border-border text-foreground/70 text-sm focus:outline-none focus:border-blue-500/50 transition-all">
                       <option value="">Select range...</option>
                       {budgetRanges.map(b => <option key={b} value={b}>{b}</option>)}
                     </select>
                   </div>
                   <div>
-                    <label className="block text-xs text-foreground/40 mb-1.5 uppercase tracking-wider">Timeline</label>
-                    <select name="timeline" className="w-full px-4 py-3 rounded-lg bg-[#030b1a] border border-border text-foreground/70 text-sm focus:outline-none focus:border-blue-500/50 transition-all">
+                    <label className="block text-xs text-muted-foreground mb-1.5 uppercase tracking-wider">Timeline</label>
+                    <select name="timeline" className="w-full px-4 py-3 rounded-lg bg-[hsl(var(--background))] border border-border text-foreground/70 text-sm focus:outline-none focus:border-blue-500/50 transition-all">
                       <option value="">Select timeline...</option>
                       {timelines.map(t => <option key={t} value={t}>{t}</option>)}
                     </select>
@@ -212,14 +212,14 @@ export function ContactSection() {
                 </div>
 
                 <div>
-                  <label className="block text-xs text-foreground/40 mb-1.5 uppercase tracking-wider">Message</label>
-                  <textarea name="message" rows={4} placeholder="Describe your project, goals, and any technical context..." className="w-full px-4 py-3 rounded-lg bg-muted border border-border text-foreground placeholder-white/25 text-sm focus:outline-none focus:border-blue-500/50 focus:bg-white/[0.06] transition-all resize-none" />
+                  <label className="block text-xs text-muted-foreground mb-1.5 uppercase tracking-wider">Message</label>
+                  <textarea name="message" rows={4} placeholder="Describe your project, goals, and any technical context..." className="w-full px-4 py-3 rounded-lg bg-muted border border-border text-foreground placeholder-foreground/30 text-sm focus:outline-none focus:border-blue-500/50 focus:bg-white/[0.06] transition-all resize-none" />
                 </div>
 
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full flex items-center justify-center gap-2 px-6 py-3.5 bg-blue-600 hover:bg-blue-500 disabled:opacity-60 text-foreground font-semibold rounded-lg transition-all shadow-lg shadow-blue-600/25 hover:shadow-blue-500/40"
+                  className="w-full flex items-center justify-center gap-2 px-6 py-3.5 bg-blue-600 hover:bg-blue-500 disabled:opacity-60 text-white font-semibold rounded-lg transition-all shadow-lg shadow-blue-600/25 hover:shadow-blue-500/40"
                 >
                   {loading ? (
                     <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />

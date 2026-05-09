@@ -42,7 +42,7 @@ const colorMap: Record<string, { text: string; bg: string; border: string; glow:
 
 export function CaseStudiesSection() {
   return (
-    <section className="py-24 bg-[#030b1a] relative overflow-hidden">
+    <section className="py-24 bg-[hsl(var(--background))] relative overflow-hidden">
       <div className="absolute inset-0 grid-pattern opacity-20" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
@@ -58,7 +58,7 @@ export function CaseStudiesSection() {
           <h2 className="text-headline text-foreground mb-4">
             Real-World <span className="gradient-text">Impact</span>
           </h2>
-          <p className="text-foreground/50 text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Systems built at enterprise scale — measured by reliability, performance, and business outcomes.
           </p>
         </motion.div>
@@ -74,7 +74,7 @@ export function CaseStudiesSection() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 whileHover={{ boxShadow: `0 0 60px ${col.glow}`, y: -4 }}
-                className={`relative rounded-xl border ${col.border} bg-[#030b1a] p-7 flex flex-col transition-all`}
+                className={`relative rounded-xl border ${col.border} bg-[hsl(var(--background))] p-7 flex flex-col transition-all`}
               >
                 <div className="flex items-center gap-3 mb-5">
                   <div className={`w-10 h-10 rounded-xl ${col.bg} flex items-center justify-center`}>
@@ -83,7 +83,7 @@ export function CaseStudiesSection() {
                   <span className={`text-xs font-semibold uppercase tracking-widest ${col.text}`}>{c.label}</span>
                 </div>
                 <h3 className="text-foreground font-bold text-lg mb-3 leading-snug">{c.title}</h3>
-                <p className="text-foreground/45 text-sm leading-relaxed mb-5">{c.challenge}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-5">{c.challenge}</p>
 
                 <div className="space-y-2 mb-5">
                   {c.impact.map(m => (
@@ -96,7 +96,7 @@ export function CaseStudiesSection() {
 
                 <div className="flex flex-wrap gap-1.5 mt-auto pt-4 border-t border-border">
                   {c.tech.map(t => (
-                    <span key={t} className="text-xs px-2 py-1 rounded bg-muted text-foreground/40">{t}</span>
+                    <span key={t} className="text-xs px-2 py-1 rounded bg-muted text-muted-foreground">{t}</span>
                   ))}
                 </div>
               </motion.div>
@@ -110,7 +110,7 @@ export function CaseStudiesSection() {
           viewport={{ once: true }}
           className="text-center mt-10"
         >
-          <Link href="/case-studies" className="inline-flex items-center gap-2 px-8 py-3.5 bg-muted hover:bg-white/10 text-foreground font-semibold rounded-lg border border-border hover:border-white/20 transition-all">
+          <Link href="/case-studies" className="inline-flex items-center gap-2 px-8 py-3.5 bg-muted hover:bg-muted text-foreground font-semibold rounded-lg border border-border hover:border-white/20 transition-all">
             View All Case Studies <ArrowRight className="w-4 h-4" />
           </Link>
         </motion.div>

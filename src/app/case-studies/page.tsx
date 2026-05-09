@@ -97,10 +97,10 @@ export default function CaseStudiesPage() {
                  </div>
                  <h3 className="text-2xl font-bold text-foreground mb-6 leading-tight">{cs.title}</h3>
                  <div className="mt-auto pt-8">
-                    <p className="text-xs font-semibold text-foreground/30 uppercase tracking-widest mb-4">Technologies</p>
+                    <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-4">Technologies</p>
                     <div className="flex flex-wrap gap-2">
                        {cs.tech.map(t => (
-                         <span key={t} className="px-2.5 py-1 rounded-md bg-muted border border-border text-foreground/50 text-xs">
+                         <span key={t} className="px-2.5 py-1 rounded-md bg-muted border border-border text-muted-foreground text-xs">
                            {t}
                          </span>
                        ))}
@@ -111,13 +111,13 @@ export default function CaseStudiesPage() {
               <div className="lg:w-2/3 p-8 lg:p-12 space-y-10">
                  <div>
                     <h4 className="text-sm font-bold text-foreground/80 uppercase tracking-widest mb-4">The Challenge</h4>
-                    <p className="text-foreground/50 leading-relaxed">{cs.challenge}</p>
+                    <p className="text-muted-foreground leading-relaxed">{cs.challenge}</p>
                  </div>
                  
                  <div className="grid md:grid-cols-2 gap-10">
                     <div>
                        <h4 className="text-sm font-bold text-foreground/80 uppercase tracking-widest mb-4">Architecture</h4>
-                       <p className="text-foreground/50 text-sm leading-relaxed">{cs.architecture}</p>
+                       <p className="text-muted-foreground text-sm leading-relaxed">{cs.architecture}</p>
                     </div>
                     <div>
                        <h4 className="text-sm font-bold text-foreground/80 uppercase tracking-widest mb-4">Business Impact</h4>

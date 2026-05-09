@@ -110,7 +110,7 @@ export function CapabilitiesSection() {
             Built for{" "}
             <span className="gradient-text">Enterprise Scale</span>
           </h2>
-          <p className="text-foreground/50 text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Deep technical expertise across every layer of the modern enterprise
             technology stack.
           </p>
@@ -140,7 +140,7 @@ export function CapabilitiesSection() {
               <h3 className="text-foreground font-semibold text-lg mb-2">
                 {cap.title}
               </h3>
-              <p className="text-foreground/50 text-sm leading-relaxed">
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 {cap.description}
               </p>
 

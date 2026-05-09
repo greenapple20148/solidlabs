@@ -32,7 +32,7 @@ const naicsCodes = [
 
 export function CapabilitySection() {
   return (
-    <section className="py-24 bg-[#030b1a] relative overflow-hidden">
+    <section className="py-24 bg-[hsl(var(--background))] relative overflow-hidden">
       <div className="absolute inset-0 grid-pattern opacity-20" />
 
       {/* Federal-style top border */}
@@ -52,7 +52,7 @@ export function CapabilitySection() {
           <h2 className="text-headline text-foreground mb-4">
             Federal <span className="gradient-text">Contractor Profile</span>
           </h2>
-          <p className="text-foreground/50 text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             SolidLabs Solutions is a qualified technology partner for federal, healthcare, and enterprise procurement.
           </p>
         </motion.div>
@@ -64,7 +64,7 @@ export function CapabilitySection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="lg:col-span-2 rounded-xl border border-border bg-white/[0.02] p-8"
+            className="lg:col-span-2 rounded-xl border border-border bg-secondary p-8"
           >
             <h3 className="text-foreground font-semibold text-lg mb-6 pb-4 border-b border-border">
               Core Competencies
@@ -84,7 +84,7 @@ export function CapabilitySection() {
                 {differentiators.map((d) => (
                   <div key={d} className="flex items-start gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-blue-400 flex-shrink-0 mt-1.5" />
-                    <span className="text-foreground/50 text-sm">{d}</span>
+                    <span className="text-muted-foreground text-sm">{d}</span>
                   </div>
                 ))}
               </div>
@@ -99,7 +99,7 @@ export function CapabilitySection() {
             transition={{ delay: 0.2 }}
             className="space-y-5"
           >
-            <div className="rounded-xl border border-border bg-white/[0.02] p-6">
+            <div className="rounded-xl border border-border bg-secondary p-6">
               <h3 className="text-foreground font-semibold text-sm mb-4 pb-3 border-b border-border uppercase tracking-widest">
                 NAICS Codes
               </h3>
@@ -107,7 +107,7 @@ export function CapabilitySection() {
                 {naicsCodes.map(({ code, label }) => (
                   <div key={code} className="flex items-center justify-between">
                     <span className="text-blue-400 font-mono text-sm">{code}</span>
-                    <span className="text-foreground/40 text-xs text-right ml-3">{label}</span>
+                    <span className="text-muted-foreground text-xs text-right ml-3">{label}</span>
                   </div>
                 ))}
               </div>
@@ -119,7 +119,7 @@ export function CapabilitySection() {
               </p>
               <Link
                 href="/capability"
-                className="flex items-center justify-center gap-2 w-full px-5 py-3 bg-blue-600 hover:bg-blue-500 text-foreground font-semibold rounded-lg text-sm transition-all shadow-lg shadow-blue-600/25 mb-3"
+                className="flex items-center justify-center gap-2 w-full px-5 py-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-lg text-sm transition-all shadow-lg shadow-blue-600/25 mb-3"
               >
                 <Download className="w-4 h-4" />
                 Download PDF

@@ -36,7 +36,7 @@ export function TechStackSection() {
             Built on{" "}
             <span className="gradient-text">Best-in-Class</span> Technology
           </h2>
-          <p className="text-foreground/50 text-lg max-w-xl mx-auto">
+          <p className="text-muted-foreground text-lg max-w-xl mx-auto">
             We engineer with the tools that power the world&apos;s most demanding systems.
           </p>
         </motion.div>
@@ -53,7 +53,7 @@ export function TechStackSection() {
                 y: -6,
                 boxShadow: `0 0 30px ${tech.color}30`,
               }}
-              className="group relative rounded-xl border border-border bg-white/[0.02] p-5 flex flex-col items-center gap-3 cursor-default transition-all duration-300"
+              className="group relative rounded-xl border border-border bg-secondary p-5 flex flex-col items-center gap-3 cursor-default transition-all duration-300"
             >
               {/* Color dot accent */}
               <div
@@ -66,7 +66,7 @@ export function TechStackSection() {
               >
                 {tech.abbr.slice(0, 2)}
               </div>
-              <span className="text-foreground/50 text-xs font-medium group-hover:text-foreground transition-colors text-center">
+              <span className="text-muted-foreground text-xs font-medium group-hover:text-foreground transition-colors text-center">
                 {tech.name}
               </span>
 

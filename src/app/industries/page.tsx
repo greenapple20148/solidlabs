@@ -76,11 +76,11 @@ export default function IndustriesPage() {
                 <ind.icon className="w-6 h-6 text-blue-400" />
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-4">{ind.title}</h3>
-              <p className="text-foreground/50 text-sm leading-relaxed mb-6 flex-grow">
+              <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-grow">
                 {ind.description}
               </p>
               <div className="space-y-3 mb-8">
-                 <p className="text-xs font-semibold text-foreground/30 uppercase tracking-widest">Key Solutions</p>
+                 <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest">Key Solutions</p>
                  {ind.solutions.map(sol => (
                    <div key={sol} className="flex items-center gap-2 text-xs text-foreground/70">
                       <div className="w-1 h-1 rounded-full bg-blue-500" />

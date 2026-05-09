@@ -61,7 +61,7 @@ export function Navbar() {
             <div className="relative w-8 h-8 flex items-center justify-center">
               <div className="absolute inset-0 bg-blue-500 rounded-lg rotate-45 opacity-20 group-hover:opacity-40 transition-opacity" />
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-violet-600 rounded-lg opacity-90" />
-              <Zap className="relative z-10 w-4 h-4 text-white" />
+              <Zap className="relative z-10 w-4 h-4 text-foreground" />
             </div>
             <div>
               <span className="text-foreground font-bold text-lg tracking-tight">
@@ -141,7 +141,7 @@ export function Navbar() {
             {mounted && (
               <button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="p-2 rounded-lg text-foreground/50 hover:text-foreground hover:bg-muted transition-all"
+                className="p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted transition-all"
                 aria-label="Toggle theme"
               >
                 {theme === "dark" ? (
@@ -153,7 +153,7 @@ export function Navbar() {
             )}
             <Link
               href="/contact"
-              className="px-5 py-2 bg-blue-600 hover:bg-blue-500 text-foreground text-sm font-semibold rounded-lg transition-all duration-200 shadow-lg shadow-blue-600/25 hover:shadow-blue-500/40"
+              className="px-5 py-2 bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold rounded-lg transition-all duration-200 shadow-lg shadow-blue-600/25 hover:shadow-blue-500/40"
             >
               Schedule Consultation
             </Link>
@@ -164,7 +164,7 @@ export function Navbar() {
             {mounted && (
               <button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="p-2 rounded-lg text-foreground/50 hover:text-foreground"
+                className="p-2 rounded-lg text-muted-foreground hover:text-foreground"
                 aria-label="Toggle theme"
               >
                 {theme === "dark" ? (
@@ -197,13 +197,13 @@ export function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="lg:hidden bg-[#050914]/95 backdrop-blur-xl border-t border-border"
+            className="lg:hidden bg-[hsl(var(--background))]/95 backdrop-blur-xl border-t border-border"
           >
             <div className="max-w-7xl mx-auto px-4 py-4 space-y-1">
               {navLinks.map((link) =>
                 link.children ? (
                   <div key={link.label}>
-                    <p className="px-3 py-2 text-xs font-semibold text-foreground/30 uppercase tracking-widest">
+                    <p className="px-3 py-2 text-xs font-semibold text-muted-foreground uppercase tracking-widest">
                       {link.label}
                     </p>
                     {link.children.map((child) => (
@@ -234,7 +234,7 @@ export function Navbar() {
               <div className="pt-3 border-t border-border">
                 <Link
                   href="/contact"
-                  className="block w-full text-center px-5 py-3 bg-blue-600 hover:bg-blue-500 text-foreground text-sm font-semibold rounded-lg transition-all"
+                  className="block w-full text-center px-5 py-3 bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold rounded-lg transition-all"
                 >
                   Schedule Consultation
                 </Link>

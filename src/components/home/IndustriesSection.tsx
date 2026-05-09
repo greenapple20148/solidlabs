@@ -91,7 +91,7 @@ export function IndustriesSection() {
           <h2 className="text-headline text-foreground mb-4">
             Vertical <span className="gradient-text">Expertise</span>
           </h2>
-          <p className="text-foreground/50 text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Deep domain knowledge across regulated and high-growth industries.
           </p>
         </motion.div>
@@ -111,10 +111,10 @@ export function IndustriesSection() {
                 <ind.icon className={`w-5 h-5 ${ind.iconColor}`} />
               </div>
               <h3 className="text-foreground font-semibold text-lg mb-2">{ind.title}</h3>
-              <p className="text-foreground/50 text-sm leading-relaxed mb-4">{ind.description}</p>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-4">{ind.description}</p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {ind.tags.map(t => (
-                  <span key={t} className="text-xs px-2.5 py-1 rounded-full bg-muted text-foreground/40 border border-border">
+                  <span key={t} className="text-xs px-2.5 py-1 rounded-full bg-muted text-muted-foreground border border-border">
                     {t}
                   </span>
                 ))}

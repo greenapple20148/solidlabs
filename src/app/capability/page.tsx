@@ -41,7 +41,7 @@ export default function CapabilityPage() {
            <div>
               <div className="enterprise-badge mb-4">Federal Contractor Profile</div>
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Capability Statement</h1>
-              <p className="text-foreground/50 text-lg">SolidLabs Solutions | CAGE: [PENDING] | UEI: [PENDING]</p>
+              <p className="text-muted-foreground text-lg">SolidLabs Solutions | CAGE: [PENDING] | UEI: [PENDING]</p>
            </div>
            <Button size="lg" icon={<Download className="w-4 h-4" />}>Download PDF Version</Button>
         </div>
@@ -73,18 +73,18 @@ export default function CapabilityPage() {
                  <h2 className="text-xl font-bold text-foreground mb-6">Codes & Classifications</h2>
                  <div className="space-y-4">
                     <div className="pb-4 border-b border-border">
-                       <p className="text-xs font-bold text-foreground/30 uppercase tracking-widest mb-2">NAICS Codes</p>
+                       <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-2">NAICS Codes</p>
                        <div className="grid grid-cols-1 gap-2">
                           {naicsCodes.slice(0, 5).map(nc => (
                             <div key={nc.code} className="flex justify-between text-sm">
                                <span className="text-blue-400 font-mono">{nc.code}</span>
-                               <span className="text-foreground/50 truncate max-w-[200px]">{nc.label}</span>
+                               <span className="text-muted-foreground truncate max-w-[200px]">{nc.label}</span>
                             </div>
                           ))}
                        </div>
                     </div>
                     <div>
-                       <p className="text-xs font-bold text-foreground/30 uppercase tracking-widest mb-2">Certifications</p>
+                       <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-2">Certifications</p>
                        <div className="flex flex-wrap gap-2">
                           <span className="px-2 py-1 bg-muted rounded text-xs text-foreground/60">SBA Certified Small Business</span>
                           <span className="px-2 py-1 bg-muted rounded text-xs text-foreground/60">HubZone [In Progress]</span>
@@ -102,7 +102,7 @@ export default function CapabilityPage() {
                  {differentiators.map((d, i) => (
                    <div key={d.title} className="p-6 rounded-xl bg-white/[0.01] border border-border">
                       <h3 className="text-foreground font-bold mb-2">{d.title}</h3>
-                      <p className="text-foreground/40 text-sm leading-relaxed">{d.desc}</p>
+                      <p className="text-muted-foreground text-sm leading-relaxed">{d.desc}</p>
                    </div>
                  ))}
               </div>

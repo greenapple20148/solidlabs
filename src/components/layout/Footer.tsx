@@ -58,7 +58,7 @@ export function Footer() {
             <Link href="/" className="flex items-center gap-3 group w-fit">
               <div className="relative w-8 h-8 flex items-center justify-center">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-violet-600 rounded-lg opacity-90" />
-                <Zap className="relative z-10 w-4 h-4 text-white" />
+                <Zap className="relative z-10 w-4 h-4 text-foreground" />
               </div>
               <div>
                 <span className="text-foreground font-bold text-lg tracking-tight">
@@ -69,7 +69,7 @@ export function Footer() {
                 </span>
               </div>
             </Link>
-            <p className="text-foreground/50 text-sm leading-relaxed max-w-xs">
+            <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
               Production-scale AI, Data Platform, Cloud Engineering, and Product Development
               for enterprise, healthcare, federal, and AI startup clients.
             </p>
@@ -80,7 +80,7 @@ export function Footer() {
                 <a
                   key={label}
                   href={href}
-                  className="flex items-center gap-2 text-foreground/40 hover:text-blue-400 text-sm transition-colors"
+                  className="flex items-center gap-2 text-muted-foreground hover:text-blue-400 text-sm transition-colors"
                 >
                   <Icon className="w-3.5 h-3.5 flex-shrink-0" />
                   {label}
@@ -101,7 +101,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="w-8 h-8 flex items-center justify-center rounded-lg bg-muted hover:bg-blue-500/20 text-foreground/40 hover:text-blue-400 transition-all"
+                  className="w-8 h-8 flex items-center justify-center rounded-lg bg-muted hover:bg-blue-500/20 text-muted-foreground hover:text-blue-400 transition-all"
                 >
                   <Icon className="w-4 h-4" />
                 </a>
@@ -120,7 +120,7 @@ export function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-foreground/40 hover:text-foreground text-sm transition-colors inline-flex items-center gap-1 group"
+                      className="text-muted-foreground hover:text-foreground text-sm transition-colors inline-flex items-center gap-1 group"
                     >
                       {link.label}
                       <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all" />
@@ -134,7 +134,7 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-border py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-foreground/30 text-sm">
+          <p className="text-muted-foreground text-sm">
             © {new Date().getFullYear()} Solid Labs LLC. All rights reserved.
           </p>
           <div className="flex items-center gap-5">
@@ -142,7 +142,7 @@ export function Footer() {
               <Link
                 key={item}
                 href="#"
-                className="text-foreground/30 hover:text-foreground/60 text-xs transition-colors"
+                className="text-muted-foreground hover:text-foreground/60 text-xs transition-colors"
               >
                 {item}
               </Link>
