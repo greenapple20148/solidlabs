@@ -129,8 +129,6 @@ export function ContactSection() {
             <div className="space-y-3">
               {[
                 { icon: Mail, label: "General Inquiries", value: "info@solidlabsai.com", href: "mailto:info@solidlabsai.com" },
-                { icon: Mail, label: "Ravi Shanmugam", value: "ravi.shanmugam@solidlabsai.com", href: "mailto:ravi.shanmugam@solidlabsai.com" },
-                { icon: Mail, label: "Nanda Jagadish", value: "nanda.jagadish@solidlabsai.com", href: "mailto:nanda.jagadish@solidlabsai.com" },
               ].map(({ icon: Icon, label, value, href }) => (
                 <a
                   key={label}
